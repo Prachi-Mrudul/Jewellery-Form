@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Bree+Serif&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bree Serif', serif;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.head{
+    margin: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.head h1{
+    font-size: 29px;
+    margin: 5px;
+}
+.head p{
+    font-size: 17px;
+    margin: 3px;
+}
+
+.contact{
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 6px;
+}
+.contact img{
+    height: 23px;
+    width: 23px;
+    margin: 5px;
+}
+.call{
+    display: flex;
+    align-items: center;
+}
+
+.input{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+input{
+    margin: 3px;
+    width: 350px;
+    padding: 0px 5px;
+    background: transparent;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+.lable{
+    margin: 2px;
+    padding-top: 5px;
+    width: 110px;
+}
+
+.table{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+table,th,td{
+    padding: 0px 7px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}

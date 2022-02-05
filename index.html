@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,105 +8,158 @@
     <title>Morya Jewellers</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="contanier">
-        <section class="heading">
+    <div class="container">
+        <section class="heading flex-center">
             <div class="head">
                 <h1>Morya Jewellers</h1>
                 <p>Gold and Sliver</p>
+                <div class="contact flex-center">
+                    <h4>Contact Us</h4>
+                    <div class="call">
+                        <img src="img/call logo.png" alt="">
+                        <p>8369091799</p>
+                    </div>
+                    <div class="call">
+                        <img src="img/wp logo.jpg" alt="">
+                        <p>7303835912</p>
+                    </div>
+                </div>
+                <div class="address">
+                    <span>Address: </span>
+                    Shop no. 2, Shree Sankalp building, Near Ekrup gym, Tembhipada road, Bhandup west, Mumbai-400078
+                </div>
                 <p>Jewelleries can be made as per your need.</p>
             </div>
-            <div class="contact">
-                <h4>Contact Us</h4>
-                <div class="call">
-                    <img src="img/call logo.png" alt="">
-                    <p>8369091799</p>
-                </div>
-                <div class="call">
-                    <img src="img/wp logo.jpg" alt="">
-                    <p>7303835912</p>
-                </div>
-            </div>
         </section>
-        <section class="form">
+        <section class="form mt-3">
             <form action="">
-                <div class="input">
-                    <div class="lable">
-                        <label for="name">Name :</label>
+                <div class="flex-center" style="justify-content: space-between;">
+                    <div class="w-48">
+                        <p>Bill No.: 69</p>
                     </div>
-                    <input type="text" id="name" autocomplete="off">
+                    <div class="w-48" style="text-align: right;">
+                        <p>Date: 24/32/4432</p>
+                    </div>
+                </div>
+                <div class="flex-center" style="justify-content: space-between;">
+                    <div class="input w-48">
+                        <div class="label">
+                            <label for="name">Name :</label>
+                        </div>
+                        <input type="text" id="customerName" autocomplete="off">
+                    </div>
+                    <div class="input w-48">
+                        <div class="label">
+                            <label for="mobile">Mobile no. :</label>
+                        </div>
+                        <input type="number" id="customerMob" autocomplete="off">
+                    </div>
                 </div>
                 <div class="input">
-                    <div class="lable">
+                    <div class="label">
                         <label for="address">Address :</label>
                     </div>
-                    <input type="text" id="address" autocomplete="off">
-                </div>
-                <div class="input">
-                    <div class="lable">
-                        <label for="mobile">Mobile no. :</label>
-                    </div>
-                    <input type="number" id="mobile" autocomplete="off">
+                    <input type="text" id="customerAdd" autocomplete="off">
                 </div>
             </form>
             <div class="table">
-                <table>
-                    <tr>
-                        <th>Sr no.</th>
-                        <th>Items</th>
-                        <th>Weight in g</th>
-                        <th>Weight in mg</th>
-                        <th>Amount</th>
-                        <th>Making charges</th>
-                        <th>Discount</th>
-                        <th>Balance</th>
-                        <th>Paid</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>wertyh</td>
-                        <td>34</td>
-                        <td>23</td>
-                        <td>4563</td>
-                        <td>456</td>
-                        <td>26%</td>
-                        <td>2345</td>
-                        <td>2345</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>rtgfds</td>
-                        <td>34</td>
-                        <td>23</td>
-                        <td>4563</td>
-                        <td>456</td>
-                        <td>26%</td>
-                        <td>2345</td>
-                        <td>2345</td>
-                    </tr>
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th>Sr. no.</th>
+                            <th class="items">Items</th>
+                            <th>Purity</th>
+                            <th>Weight (gm)</th>
+                            <th>Weight (mg)</th>
+                            <th>Rate</th>
+                            <th class="w-200">Making charges</th>
+                            <th class="w-200">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tBody"></tbody>
+                </table>
+                <table class="inpForm">
+                    <thead>
+                        <form id="inpForm">
+                            <tr>
+                                <th style="width: 148px;">
+                                    <button type="button" id="add-btn" onclick="addElem(this)">Add</button>
+                                </th>
+                                <th class="items" style="width: 348px;">
+                                    <input placeholder="Item" class="tableInp" type="text">
+                                </th>
+                                <th style="width: 150px;">
+                                    <input class="tableInp" placeholder="Purity" type="text">
+                                </th>
+                                <th>
+                                    <input class="tableInp" placeholder="Wt. (gm)" type="text">
+                                </th>
+                                <th>
+                                    <input class="tableInp" placeholder="Wt. (mg)" type="text">
+                                </th>
+                                <th>
+                                    <input class="tableInp" placeholder="Amount" type="text">
+                                </th>
+                                <th class="w-200">
+                                    <input placeholder="Making Charges" class="tableInp" type="text">
+                                </th>
+                                <th class="w-200">
+                                    <input class="tableInp" type="text" value="0" readonly>
+                                </th>
+                            </tr>
+                        </form>
+                    </thead>
+                </table>
+                <table class="btm-table">
+                    <thead>
+                        <tr>
+                            <th class="trash"></th>
+                            <th class="w-200">GST</th>
+                            <th class="w-200"><input class="tableInp" type="text" id="gst" placeholder="GST"></th>
+                        </tr>
+                        <tr>
+                            <th class="trash"><button id="evaluate-btn" onclick="evaluateTable()">Evaluate</button></th>
+                            <th class="w-200">Grand Total</th>
+                            <th class="w-200" id="grandTotal">0</th>
+                        </tr>
+                    </thead>
                 </table>
             </div>
-            <form action="">
-                <div class="input">
-                    <div class="lable">
-                        <label for="discount">Discount :</label>
+            <form class="bottom">
+                <div class="flex-center" style="justify-content: space-between;">
+                    <div class="input w-48">
+                        <div class="label">
+                            <label for="discount">Discount :</label>
+                        </div>
+                        <input type="number" id="discount" autocomplete="off">
                     </div>
-                    <input type="number" id="discount" autocomplete="off">
+                    <div class="input w-48">
+                        <div class="label">
+                            <label for="total">Total :</label>
+                        </div>
+                        <input type="number" id="total" autocomplete="off">
+                    </div>
                 </div>
-                <div class="input">
-                    <div class="lable">
-                        <label for="balance">Balance :</label>
+                <div class="flex-center" style="justify-content: space-between;">
+                    <div class="input w-48">
+                        <div class="label">
+                            <label for="paid">Paid :</label>
+                        </div>
+                        <input type="number" id="paid" autocomplete="off">
                     </div>
-                    <input type="number" id="balance" autocomplete="off">
-                </div>
-                <div class="input">
-                    <div class="lable">
-                        <label for="total">Total :</label>
+                    <div class="input w-48">
+                        <div class="label">
+                            <label for="balance">Balance :</label>
+                        </div>
+                        <input type="number" id="balance" autocomplete="off">
                     </div>
-                    <input type="number" id="total" autocomplete="off">
                 </div>
             </form>
         </section>
     </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
